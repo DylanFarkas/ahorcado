@@ -47,12 +47,12 @@ export default function HangmanGame() {
       transition={{ duration: 0.5 }}
     >
       {/* Título */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-purple-400 dark:via-pink-400 dark:to-indigo-400">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-800 dark:text-slate-100">
         Ahorcado
       </h1>
 
       {/* Figura del ahorcado */}
-      <HangmanFigure errors={game.errors} />
+      <HangmanFigure errors={game.errors} gameOver={isGameOver} />
 
       {/* Palabra */}
       <WordDisplay

@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed top-4 right-4 sm:top-6 sm:right-6 p-3 rounded-full bg-white/10 dark:bg-white/10 hover:bg-white/20 dark:hover:bg-white/20 backdrop-blur-sm border border-white/20 shadow-lg transition-colors z-50"
+      className="fixed top-4 right-4 sm:top-6 sm:right-6 p-3 rounded-full bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm transition-colors z-50"
       aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
     >
       <motion.div
@@ -38,9 +38,9 @@ export default function ThemeToggle() {
         transition={{ duration: 0.3 }}
       >
         {isDark ? (
-          <Sun className="w-6 h-6 text-yellow-300" />
+          <Sun className="w-6 h-6 text-amber-500" />
         ) : (
-          <Moon className="w-6 h-6 text-indigo-300" />
+          <Moon className="w-6 h-6 text-indigo-600" />
         )}
       </motion.div>
     </motion.button>

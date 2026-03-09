@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ahorcado
 
-## Getting Started
+Juego clásico del ahorcado desarrollado como aplicación web con Next.js.
 
-First, run the development server:
+Adivina la palabra letra por letra antes de que se complete la figura. Incluye teclado virtual, soporte para teclado físico, animaciones con Framer Motion y modo claro/oscuro.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tecnologías
+
+- **Next.js 16** — App Router
+- **React 19** — Componentes con hooks
+- **TypeScript 5** — Tipado estático
+- **Tailwind CSS 4** — Estilos utilitarios
+- **Framer Motion** — Animaciones del muñeco y transiciones
+- **Lucide React** — Iconos
+
+## Estructura del proyecto
+
+```
+app/
+  page.tsx              Página principal
+  layout.tsx            Layout con tema y fuentes
+  api/words/route.ts    API para obtener palabras
+src/
+  components/game/      Componentes del juego
+    HangmanGame.tsx     Componente principal (estado y lógica)
+    HangmanFigure.tsx   Dibujo SVG animado del ahorcado
+    WordDisplay.tsx     Palabra con letras ocultas
+    VirtualKeyboard.tsx Teclado interactivo
+    GameStatus.tsx      Intentos, resultado y reinicio
+  components/theme/
+    ThemeToggle.tsx      Botón modo claro/oscuro
+  data/words.ts         Lista de palabras en español
+  lib/game.ts           Lógica pura del juego
+  types/game.ts         Tipos TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cómo ejecutar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Cómo jugar
 
-To learn more about Next.js, take a look at the following resources:
+1. Se selecciona una palabra aleatoria en español.
+2. Haz clic en las letras del teclado virtual o usa el teclado físico.
+3. Cada letra incorrecta dibuja una parte del muñeco (6 intentos máximo).
+4. Ganas si completas la palabra. Pierdes si se dibuja la figura completa.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run start` | Servidor de producción |
+| `npm run lint` | Lint con ESLint |

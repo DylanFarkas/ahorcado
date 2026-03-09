@@ -35,7 +35,7 @@ export default function WordDisplay({
                 showMissed
                   ? "text-red-500 dark:text-red-400"
                   : isRevealed
-                  ? "text-gray-900 dark:text-white"
+                  ? "text-slate-800 dark:text-slate-100"
                   : "text-transparent"
               }`}
               initial={isRevealed ? { scale: 1.4 } : {}}
@@ -44,7 +44,7 @@ export default function WordDisplay({
             >
               {isRevealed || showMissed ? letter : "\u00A0"}
             </motion.span>
-            <div className="w-8 sm:w-10 md:w-12 h-1 bg-gray-300 dark:bg-white/40 rounded mt-1" />
+            <div className="w-8 sm:w-10 md:w-12 h-1 bg-slate-300 dark:bg-slate-600 rounded mt-1" />
           </motion.div>
         );
       })}

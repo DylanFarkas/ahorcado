@@ -55,10 +55,10 @@ export default function VirtualKeyboard({
                   flex items-center justify-center
                   ${
                     state === "correct"
-                      ? "bg-green-500 text-white cursor-default"
+                      ? "bg-emerald-500 dark:bg-emerald-600 text-white cursor-default"
                       : state === "incorrect"
-                      ? "bg-red-500/70 text-white/60 cursor-default"
-                      : "bg-indigo-200 dark:bg-white/20 text-gray-900 dark:text-white hover:bg-indigo-300 dark:hover:bg-white/30 cursor-pointer"
+                      ? "bg-red-400/70 dark:bg-red-500/60 text-white/60 cursor-default"
+                      : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 hover:bg-slate-300 dark:hover:bg-slate-600 cursor-pointer"
                   }
                   ${disabled && !isUsed ? "opacity-50 cursor-default" : ""}
                 `}
