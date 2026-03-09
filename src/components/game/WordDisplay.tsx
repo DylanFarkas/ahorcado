@@ -33,18 +33,18 @@ export default function WordDisplay({
             <motion.span
               className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider ${
                 showMissed
-                  ? "text-red-400"
+                  ? "text-red-500 dark:text-red-400"
                   : isRevealed
-                  ? "text-white"
+                  ? "text-gray-900 dark:text-white"
                   : "text-transparent"
               }`}
-              initial={isRevealed ? { scale: 1.4, color: "#22c55e" } : {}}
-              animate={isRevealed ? { scale: 1, color: "#ffffff" } : {}}
+              initial={isRevealed ? { scale: 1.4 } : {}}
+              animate={isRevealed ? { scale: 1 } : {}}
               transition={{ duration: 0.3 }}
             >
               {isRevealed || showMissed ? letter : "\u00A0"}
             </motion.span>
-            <div className="w-8 sm:w-10 md:w-12 h-1 bg-white/40 rounded mt-1" />
+            <div className="w-8 sm:w-10 md:w-12 h-1 bg-gray-300 dark:bg-white/40 rounded mt-1" />
           </motion.div>
         );
       })}

@@ -38,7 +38,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
         y2="230"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-gray-400"
+        className="text-gray-600 dark:text-gray-400"
       />
       {/* Poste vertical */}
       <line
@@ -48,7 +48,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
         y2="20"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-gray-400"
+        className="text-gray-600 dark:text-gray-400"
       />
       {/* Viga horizontal */}
       <line
@@ -58,7 +58,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
         y2="20"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-gray-400"
+        className="text-gray-600 dark:text-gray-400"
       />
       {/* Cuerda */}
       <line
@@ -68,7 +68,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
         y2="50"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-gray-400"
+        className="text-gray-600 dark:text-gray-400"
       />
 
       {/* Cabeza */}
@@ -80,7 +80,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           fill="none"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={circleDraw}
           initial="hidden"
           animate="visible"
@@ -96,7 +96,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           y2="150"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={draw}
           initial="hidden"
           animate="visible"
@@ -112,7 +112,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           y2="140"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={draw}
           initial="hidden"
           animate="visible"
@@ -128,7 +128,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           y2="140"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={draw}
           initial="hidden"
           animate="visible"
@@ -144,7 +144,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           y2="190"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={draw}
           initial="hidden"
           animate="visible"
@@ -160,7 +160,7 @@ export default function HangmanFigure({ errors }: HangmanFigureProps) {
           y2="190"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-yellow-400"
+          className="text-amber-600 dark:text-yellow-400"
           variants={draw}
           initial="hidden"
           animate="visible"

@@ -25,7 +25,7 @@ export default function GameStatus({
       {/* Intentos restantes */}
       {status === "playing" && (
         <div className="flex items-center gap-2">
-          <span className="text-white/70 text-sm sm:text-base">
+          <span className="text-gray-700 dark:text-white/70 text-sm sm:text-base">
             Intentos restantes:
           </span>
           <div className="flex gap-1">
@@ -56,16 +56,16 @@ export default function GameStatus({
           >
             <div
               className={`text-2xl sm:text-3xl font-bold ${
-                status === "won" ? "text-green-400" : "text-red-400"
+                status === "won" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
               }`}
             >
               {status === "won" ? "🎉 ¡Ganaste!" : "💀 ¡Perdiste!"}
             </div>
 
             {status === "lost" && (
-              <p className="text-white/70 text-sm sm:text-base">
+              <p className="text-gray-700 dark:text-white/70 text-sm sm:text-base">
                 La palabra era:{" "}
-                <span className="font-bold text-yellow-400">{word}</span>
+                <span className="font-bold text-amber-600 dark:text-yellow-400">{word}</span>
               </p>
             )}
 
@@ -73,7 +73,7 @@ export default function GameStatus({
               onClick={onRestart}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 
+              className="mt-2 px-6 py-3 bg-linear-to-r from-purple-500 to-indigo-500 
                 text-white font-bold rounded-xl text-base sm:text-lg
                 hover:from-purple-600 hover:to-indigo-600
                 shadow-lg shadow-purple-500/30 cursor-pointer"

@@ -5,6 +5,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +17,13 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+html.dark {
+  color-scheme: dark;
 }

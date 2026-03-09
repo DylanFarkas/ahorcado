@@ -58,7 +58,7 @@ export default function VirtualKeyboard({
                       ? "bg-green-500 text-white cursor-default"
                       : state === "incorrect"
                       ? "bg-red-500/70 text-white/60 cursor-default"
-                      : "bg-white/20 text-white hover:bg-white/30 cursor-pointer"
+                      : "bg-indigo-200 dark:bg-white/20 text-gray-900 dark:text-white hover:bg-indigo-300 dark:hover:bg-white/30 cursor-pointer"
                   }
                   ${disabled && !isUsed ? "opacity-50 cursor-default" : ""}
                 `}
