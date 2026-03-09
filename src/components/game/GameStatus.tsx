@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Trophy, Skull, RotateCcw } from "lucide-react";
 import type { GameStatus as GameStatusType } from "@/src/types/game";
 
 interface GameStatusProps {
@@ -55,11 +56,21 @@ export default function GameStatus({
             className="flex flex-col items-center gap-3"
           >
             <div
-              className={`text-2xl sm:text-3xl font-bold ${
+              className={`flex items-center gap-2 text-2xl sm:text-3xl font-bold ${
                 status === "won" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
               }`}
             >
-              {status === "won" ? "🎉 ¡Ganaste!" : "💀 ¡Perdiste!"}
+              {status === "won" ? (
+                <>
+                  <Trophy className="w-8 h-8" />
+                  <span>¡Ganaste!</span>
+                </>
+              ) : (
+                <>
+                  <Skull className="w-8 h-8" />
+                  <span>¡Perdiste!</span>
+                </>
+              )}
             </div>
 
             {status === "lost" && (
@@ -73,12 +84,14 @@ export default function GameStatus({
               onClick={onRestart}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-2 px-6 py-3 bg-linear-to-r from-purple-500 to-indigo-500 
+              className="mt-2 bg-linear-to-r from-purple-500 to-indigo-500 
                 text-white font-bold rounded-xl text-base sm:text-lg
                 hover:from-purple-600 hover:to-indigo-600
-                shadow-lg shadow-purple-500/30 cursor-pointer"
+                shadow-lg shadow-purple-500/30 cursor-pointer
+                flex items-center gap-2 px-8 py-5"
             >
-              🔄 Nueva Partida
+              <RotateCcw className="w-5 h-5" />
+              <span>Nueva Partida</span>
             </motion.button>
           </motion.div>
         )}
